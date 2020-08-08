@@ -2,6 +2,11 @@ function logindd(){
      var email = document.gerElementById('email').value;
      var pwd = document.getElementById('pwd').value;
      
-     console.log(email);
-     console.log(pwd);
+     firebase.auth().signInWithEmailAndPassword(email, pwd).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+     
 }
